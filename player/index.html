@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Видеоплеер :: Видеоплеер</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Место под плеер"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://vidi1.ru/player/" />
+
+
+<link rel="stylesheet" href="https://vidi1.ru/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://vidi1.ru/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://vidi1.ru/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Видеоплеер :: Видеоплеер — " />
+<meta name="twitter:description" content="Место под плеер" />
+<meta name="twitter:site" content="https://vidi1.ru/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Видеоплеер :: Видеоплеер — ">
+<meta property="og:description" content="Место под плеер" />
+<meta property="og:url" content="https://vidi1.ru/player/" />
+<meta property="og:site_name" content="Видеоплеер" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-12-20 01:06:13 &#43;0300 MSK" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container full">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Видеоплеер
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/player">Видеоплеер</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/player">Видеоплеер</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://vidi1.ru/player/">Видеоплеер</a></h1>
+  <div class="post-meta">
+      
+    
+    
+  </div>
+
+
+  
+
+  
+
+  <div class="post-content">
+  <video id="video" width="640" height="360" crossOrigin="anonymous" controls class="video-js vjs-default-skin vjs-big-play-centered">
+</video>
+  </div>
+  
+
+<script src="https://vidi1.ru/assets/main.js"></script>
+<script src="https://vidi1.ru/assets/prism.js"></script>
+
+<script src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+
+<script src="https://vidi1.ru/assets/clpp.withstyles.min.js"></script>
+<script>
+  var player = clpp.init('#video', {
+    license: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1cmxzIjpbImh0dHBzOi8vdmlkaTEucnUvIiwiaHR0cHM6Ly93d3cudmlkaXJ1cy5ydS8iXSwidHlwZSI6IldlYiIsImtpZCI6MjI3NCwiaWx2IjpmYWxzZX0.NU3syDJ3FNtGl8Gts4LCKZGf6M8WhvoRHNEU7CFOGsJsk1VV301xk8VTy58I8-1T8E3g6vJ4ypbq4Agw2s7wSESabp6t7g5aVsaIVXPr5UFn__KXXKK1V7Unn52S-h1OpzzAi6fbRxXxeP1gZO5GE5bMTWFchoH4ZSwX1ysH6dEMO6Z00REgQHEhBw1SvalPREv41YDIhSZvLnXFIGABsIY7l6dRWHDAKL30Vj6zYPqO1d5mDqTr99pxcGHSZ0YD079D24462VjBkfxVXwuusbtnWCQE-P6HMLnTCtgT94HCKZZADPd77vs8AriENXW0fDTL67uXRkScLf9QbAq0Yg",
+    chromecast: {
+
+      /* This application ID isn't public. Please create new one. You can use `chromecast.html` as a sample receiver. */
+      appId: 'D80D5506'
+    },
+    drmtoday: {
+      userId: 'purchase',
+      sessionId: 'p0',
+      merchant: 'six',
+      environment: clpp.statics.drmtoday.STAGING
+    }
+  });
+
+  player.load([
+    {src: 'https://youtu.be/TdRllKvKi9k', drmProtected: true},
+  ]).then(function() {
+    console.log('Player is ready');
+  });
+</script>
+
+
+  
+</div>
+
+</body>
+</html>
