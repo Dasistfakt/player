@@ -1,0 +1,327 @@
+/*! @castlabs/prestoplay 5.1.36, 05-02-2020 Copyright (c) 2020 castLabs GmbH, All Rights reserved */
+
+.video-js .vjs-chromecast-button,
+.video-js .vjs-settings-button,
+.video-js .vjs-subtitles-creator-button,
+.video-js .vjs-airplay-button {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.video-js .vjs-chromecast-button:hover,
+.video-js .vjs-airplay-button:hover {
+  /*it causes the icon to dissapear when hover mouse over it*/
+  /*filter: drop-shadow(0px 0px 8px #FFF);*/
+}
+
+.video-js .vjs-chromecast-button.casting:hover,
+.video-js .vjs-airplay-button.casting:hover {
+  /*it causes the icon to dissapear when hover mouse over it*/
+  /*filter: drop-shadow(0px 0px 8px #66A8CC);*/
+}
+
+.video-js .vjs-chromecast-button {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjM0OTkuMSIgaGVpZ2h0PSIyODcwLjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojRkZGO308L3N0eWxlPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGlkPSJzdmdfMSIgZD0ibTExLjksMjM4NC4xbDAsNDc0LjVsNDc0LjUsMGMtMC4xLC0yNjEgLTIxMy42LC00NzQuNSAtNDc0LjUsLTQ3NC41em0wLC02MjguNmwwLDMyMC4zYzQzOC45LDAgNzk0LjcsMzU1LjggNzk0LjcsNzk0LjdsMzIwLjMsMGMtMTEuOSwtNjE2LjggLTUxMC4xLC0xMTE1IC0xMTE1LC0xMTE1em0yODU4LjYsLTExMTVsLTIyMzAsMGwwLDI2MWM2MjguNywyMDEuNiAxMTI2LjgsNjk5LjggMTMyOC41LDEzMjguNWw4ODkuNiwwbDAsLTE1ODkuNWwxMS45LDB6bS0yODU4LjYsNDc0LjVsMCwzMjAuM2M3OTQuNywwIDE0MzUuMiw2NDAuNSAxNDM1LjIsMTQzNS4ybDMwOC40LDBjMCwtOTcyLjcgLTc4Mi45LC0xNzU1LjUgLTE3NDMuNiwtMTc1NS41em0zMTc4LjgsLTExMTVsLTI4NzAuNCwwYy0xNzgsMCAtMzIwLjMsMTQyLjMgLTMyMC4zLDMyMC4zbDAsNDc0LjVsMzIwLjMsMGwwLC00NzQuNWwyODU4LjYsMGwwLDIyMTguMWwtMTExNSwwbDAsMzIwLjNsMTExNSwwYzE3Ny45LDAgMzIwLjMsLTE0Mi4zIDMyMC4zLC0zMjAuM2wwLC0yMjE4LjFjLTAuMSwtMTc4IC0xNDIuNCwtMzIwLjMgLTMwOC41LC0zMjAuM3oiIGNsYXNzPSJzdDAiLz4KIDwvZz4KPC9zdmc+");
+  background-size: 1.8em;
+}
+
+.video-js .vjs-settings-button {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTkuMjAwMDAxcHQiIGhlaWdodD0iMTkuMjAwMDAxcHQiIHZpZXdCb3g9IjAgMCAxOS4yMDAwMDEgMTkuMjAwMDAxIiB2ZXJzaW9uPSIxLjEiPiAgPGcgaWQ9InN1cmZhY2UxIj4gICAgPHBhdGggZD0iTTE2IDExLjYwMTU2MkwxNiA5LjI4MTI1IDE0LjU1ODU5NCA5LjAzOTA2MkMxNC40ODA0NjkgOC43MTg3NSAxNC4zMjAzMTIgOC4zOTg0MzggMTQuMDc4MTI1IDcuOTIxODc1TDE0Ljk2MDkzOCA2LjcxODc1IDEzLjI4MTI1IDUuMDM5MDYyIDEyLjA3ODEyNSA1LjkyMTg3NUMxMS42Nzk2ODggNS42Nzk2ODggMTEuMjgxMjUgNS41MTk1MzEgMTAuOTYwOTM4IDUuNDQxNDA2TDEwLjgwMDc4MSA0IDguNDgwNDY5IDQgOC4yMzgyODEgNS40NDE0MDZDNy44Mzk4NDQgNS41MTk1MzEgNy41MTk1MzEgNS42Nzk2ODggNy4xMjEwOTQgNS45MjE4NzVMNS45MjE4NzUgNS4wMzkwNjIgNC4yMzgyODEgNi43MTg3NSA1LjAzOTA2MiA3LjkyMTg3NUM0LjgwMDc4MSA4LjMyMDMxMiA0LjcxODc1IDguNjQwNjI1IDQuNTU4NTk0IDkuMDM5MDYyTDMuMTk5MjE5IDkuMTk5MjE5IDMuMTk5MjE5IDExLjUxOTUzMSA0LjY0MDYyNSAxMS43NjE3MTlDNC43MTg3NSAxMi4xNjAxNTYgNC44Nzg5MDYgMTIuNDgwNDY5IDUuMTIxMDk0IDEyLjg3ODkwNkw0LjMyMDMxMiAxNC4wNzgxMjUgNiAxNS43NjE3MTkgNy4xOTkyMTkgMTQuOTYwOTM4QzcuNTE5NTMxIDE1LjEyMTA5NCA3LjkyMTg3NSAxNS4yODEyNSA4LjMyMDMxMiAxNS40NDE0MDZMOC41NTg1OTQgMTYuODc4OTA2IDEwLjk2MDkzOCAxNi44Nzg5MDYgMTEuMTk5MjE5IDE1LjQ0MTQwNkMxMS42MDE1NjIgMTUuMzU5Mzc1IDExLjkyMTg3NSAxNS4xOTkyMTkgMTIuMzIwMzEyIDE0Ljk2MDkzOEwxMy41MTk1MzEgMTUuODM5ODQ0IDE1LjE5OTIxOSAxNC4xNjAxNTYgMTQuMzIwMzEyIDEyLjk2MDkzOEMxNC41NTg1OTQgMTIuNTU4NTk0IDE0LjcxODc1IDEyLjE2MDE1NiAxNC44MDA3ODEgMTEuODM5ODQ0Wk05LjYwMTU2MiAxMi44MDA3ODFDOC4yMzgyODEgMTIuODAwNzgxIDcuMTk5MjE5IDExLjc2MTcxOSA3LjE5OTIxOSAxMC4zOTg0MzggNy4xOTkyMTkgOS4wMzkwNjIgOC4yMzgyODEgOCA5LjYwMTU2MiA4IDEwLjk2MDkzOCA4IDEyIDkuMDM5MDYyIDEyIDEwLjM5ODQzOCAxMiAxMS43NjE3MTkgMTAuOTYwOTM4IDEyLjgwMDc4MSA5LjYwMTU2MiAxMi44MDA3ODFaTTkuNjAxNTYyIDEyLjgwMDc4MSIgc3R5bGU9IiBzdHJva2U6bm9uZTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztmaWxsOnJnYigxMDAlLDEwMCUsMTAwJSkiLz4gIDwvZz48L3N2Zz4=');
+  background-size: 2.4em;
+  margin-top: -0.1em;
+}
+
+.video-js .vjs-subtitles-creator-button {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSI0NTkiIGhlaWdodD0iNDU5IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0ibm9uZSIvPjxnIGNsYXNzPSJjdXJyZW50TGF5ZXIiPjx0aXRsZT5MYXllciAxPC90aXRsZT48ZyBpZD0ic3ZnXzEiIGNsYXNzPSIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utb3BhY2l0eT0iMSI+PGcgaWQ9ImNsb3NlZC1jYXB0aW9uIiBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLW9wYWNpdHk9IjEiPjxwYXRoIGQ9Ik00MDgsMjUuNUg1MWMtMjguMDUsMC01MSwyMi45NS01MSw1MXYzMDZjMCwyOC4wNSwyMi45NSw1MSw1MSw1MWgzNTdjMjguMDUsMCw1MS0yMi45NSw1MS01MXYtMzA2ICAgIEM0NTksNDguNDUsNDM2LjA1LDI1LjUsNDA4LDI1LjV6IE0yMDQsMjA0aC0zOC4yNXYtMTIuNzVoLTUxdjc2LjVoNTFWMjU1SDIwNHYyNS41YzAsMTUuMy0xMC4yLDI1LjUtMjUuNSwyNS41SDEwMiAgICBjLTE1LjMsMC0yNS41LTEwLjItMjUuNS0yNS41di0xMDJjMC0xNS4zLDEwLjItMjUuNSwyNS41LTI1LjVoNzYuNWMxNS4zLDAsMjUuNSwxMC4yLDI1LjUsMjUuNVYyMDR6IE0zODIuNSwyMDRoLTM4LjI1di0xMi43NSAgICBoLTUxdjc2LjVoNTFWMjU1aDM4LjI1djI1LjVjMCwxNS4zLTEwLjIsMjUuNS0yNS41LDI1LjVoLTc2LjVjLTE1LjMsMC0yNS41LTEwLjItMjUuNS0yNS41di0xMDJjMC0xNS4zLDEwLjItMjUuNSwyNS41LTI1LjVIMzU3ICAgIGMxNS4zLDAsMjUuNSwxMC4yLDI1LjUsMjUuNVYyMDR6IiBmaWxsPSIjZmZmZmZmIiBpZD0ic3ZnXzIiIGZpbGwtb3BhY2l0eT0iMSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utb3BhY2l0eT0iMSIvPjwvZz48L2c+PGcgaWQ9InN2Z18zIj48L2c+PGcgaWQ9InN2Z180Ij48L2c+PGcgaWQ9InN2Z181Ij48L2c+PGcgaWQ9InN2Z182Ij48L2c+PGcgaWQ9InN2Z183Ij48L2c+PGcgaWQ9InN2Z184Ij48L2c+PGcgaWQ9InN2Z185Ij48L2c+PGcgaWQ9InN2Z18xMCI+PC9nPjxnIGlkPSJzdmdfMTEiPjwvZz48ZyBpZD0ic3ZnXzEyIj48L2c+PGcgaWQ9InN2Z18xMyI+PC9nPjxnIGlkPSJzdmdfMTQiPjwvZz48ZyBpZD0ic3ZnXzE1Ij48L2c+PGcgaWQ9InN2Z18xNiI+PC9nPjxnIGlkPSJzdmdfMTciPjwvZz48Zm9yZWlnbk9iamVjdCBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1kYXNob2Zmc2V0PSIiIGZpbGwtcnVsZT0ibm9uemVybyIgZm9udC1zaXplPSIxMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIgbWFya2VyLXN0YXJ0PSIiIG1hcmtlci1taWQ9IiIgbWFya2VyLWVuZD0iIiBpZD0ic3ZnXzE4IiB4PSI0Ny4xNTQ5Mjc3OTA3ODQwODYiIHk9IjMxNC41MzI3Njg2MzgyMzIiIHdpZHRoPSIzNjUuMjAwODI3OTIwOTM4NjUiIGhlaWdodD0iOTguODE3MTUzNjU4Nzk0NTgiIHN0eWxlPSJjb2xvcjogcmdiKDAsIDAsIDApOyB0ZXh0LWFsaWduOiBjZW50ZXI7IiBjbGFzcz0iIj48cCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCIgc3R5bGU9ImJvcmRlcjogbm9uZTtvdXRsaW5lOiBub25lO2ZvbnQtc2l6ZTogaW5oZXJpdDtsaW5lLWhlaWdodDogMWVtO3BhZGRpbmc6MDttYXJnaW46MDsiPnNldHRpbmdzPC9wPjwvZm9yZWlnbk9iamVjdD48Zm9yZWlnbk9iamVjdCBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1kYXNob2Zmc2V0PSIiIGZpbGwtcnVsZT0ibm9uemVybyIgZm9udC1zaXplPSIxMDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIgbWFya2VyLXN0YXJ0PSIiIG1hcmtlci1taWQ9IiIgbWFya2VyLWVuZD0iIiBpZD0ic3ZnXzIwIiB4PSIxNDIiIHk9IjkyIiB3aWR0aD0iMzgiIGhlaWdodD0iOTEiIHN0eWxlPSJjb2xvcjogcmdiKDAsIDAsIDApOyIgY2xhc3M9IiI+PHAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJib3JkZXI6IG5vbmU7b3V0bGluZTogbm9uZTtmb250LXNpemU6IGluaGVyaXQ7bGluZS1oZWlnaHQ6IDFlbTtwYWRkaW5nOjA7bWFyZ2luOjA7Ij48L3A+PC9mb3JlaWduT2JqZWN0PjwvZz48L3N2Zz4=);
+  background-size: 1.6em;
+}
+
+.video-js .vjs-subtitles-creator-overlay {
+  background-color: #333;
+  border: 1px solid #aaa;
+  bottom: 70px;
+  display: block;
+  left: 0;
+  overflow: auto;
+  opacity: 1;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 10000;
+}
+.video-js .vjs-subtitles-creator-overlay .wrapper {
+  display: block;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.video-js .vjs-subtitles-creator-overlay .header {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 1px 0 3px 0;
+  text-align: left;
+}
+.video-js .vjs-subtitles-creator-overlay .item {
+  padding: 2px 0 0 10px;
+}
+.video-js .vjs-subtitles-creator-overlay .title {
+  display: inline-block;
+  text-align: left;
+  width: 80px;
+}
+.video-js .vjs-subtitles-creator-overlay .comboBox {
+  width: 200px;
+}
+.video-js .vjs-subtitles-creator-overlay .title,
+.video-js .vjs-subtitles-creator-overlay .comboBox {
+  line-height: 20px;
+}
+.video-js .vjs-subtitles-creator-overlay .configuration {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  min-height: 200px;
+  padding: 3px 5px;
+  text-align: left;
+  user-select: all;
+  -webkit-user-select: all; /* Chrome, Opera, Safari */
+  -moz-user-select: all; /* Firefox 2+ */
+  -ms-user-select: all; /* IE 10+ */
+  width: 100%;
+}
+.video-js .vjs-subtitles-creator-overlay .view-frame {
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+}
+.video-js .vjs-subtitles-creator-overlay .view {
+  display: inline-block;
+}
+.video-js .vjs-subtitles-creator-overlay .vjs-subtitles-creator-overlay-reset-btn {
+  color: red;
+  display: inline-block;
+  width: auto;
+}
+
+.video-js .vjs-chromecast-button.casting {
+  /* SVG is repeated and path color is changed. It's not possible to change color of inline SVG */
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjM0OTkuMSIgaGVpZ2h0PSIyODcwLjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojNjZBOENDO308L3N0eWxlPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGlkPSJzdmdfMSIgZD0ibTExLjksMjM4NC4xbDAsNDc0LjVsNDc0LjUsMGMtMC4xLC0yNjEgLTIxMy42LC00NzQuNSAtNDc0LjUsLTQ3NC41em0wLC02MjguNmwwLDMyMC4zYzQzOC45LDAgNzk0LjcsMzU1LjggNzk0LjcsNzk0LjdsMzIwLjMsMGMtMTEuOSwtNjE2LjggLTUxMC4xLC0xMTE1IC0xMTE1LC0xMTE1em0yODU4LjYsLTExMTVsLTIyMzAsMGwwLDI2MWM2MjguNywyMDEuNiAxMTI2LjgsNjk5LjggMTMyOC41LDEzMjguNWw4ODkuNiwwbDAsLTE1ODkuNWwxMS45LDB6bS0yODU4LjYsNDc0LjVsMCwzMjAuM2M3OTQuNywwIDE0MzUuMiw2NDAuNSAxNDM1LjIsMTQzNS4ybDMwOC40LDBjMCwtOTcyLjcgLTc4Mi45LC0xNzU1LjUgLTE3NDMuNiwtMTc1NS41em0zMTc4LjgsLTExMTVsLTI4NzAuNCwwYy0xNzgsMCAtMzIwLjMsMTQyLjMgLTMyMC4zLDMyMC4zbDAsNDc0LjVsMzIwLjMsMGwwLC00NzQuNWwyODU4LjYsMGwwLDIyMTguMWwtMTExNSwwbDAsMzIwLjNsMTExNSwwYzE3Ny45LDAgMzIwLjMsLTE0Mi4zIDMyMC4zLC0zMjAuM2wwLC0yMjE4LjFjLTAuMSwtMTc4IC0xNDIuNCwtMzIwLjMgLTMwOC41LC0zMjAuM3oiIGNsYXNzPSJzdDAiLz4KIDwvZz4KPC9zdmc+");
+}
+
+.video-js .vjs-airplay-button {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjY5OCIgaGVpZ2h0PSI1ODciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gaWQ9InN2Z18zIiBwb2ludHM9Ijk1LjMxMzk5NTM2MTMyODEyLDU4Ny4wMDAwMTUyNTg3ODkxIDYwMi42ODU5NzQxMjEwOTM4LDU4Ny4wMDAwMTUyNTg3ODkxIDM0OSwyOTQuNDI5MDMxMzcyMDcwMyAiIGZpbGw9IiNGRkZGRkYiLz4KICA8cG9seWdvbiBpZD0ic3ZnXzQiIHBvaW50cz0iMjAxLjMwNTk5OTc1NTg1OTM4LDM5MC4wMDAwMTUyNTg3ODkwNiAzMSwzOTAuMDAwMDE1MjU4Nzg5MDYgMzEsMzEuMDAwMDE1MjU4Nzg5MDYyIDY2NywzMS4wMDAwMTUyNTg3ODkwNjIgNjY3LDM5MC4wMDAwMTUyNTg3ODkwNiA0OTYuNjkzOTY5NzI2NTYyNSwzOTAuMDAwMDE1MjU4Nzg5MDYgNTIzLjk4OTk5MDIzNDM3NSw0MjIuMDAwMDE1MjU4Nzg5MDYgNjk4LDQyMi4wMDAwMTUyNTg3ODkwNiA2OTgsMCAwLDAgMCw0MjIuMDAwMDE1MjU4Nzg5MDYgMTc0LjAxMDAwOTc2NTYyNSw0MjIuMDAwMDE1MjU4Nzg5MDYgIiBmaWxsPSIjRkZGRkZGIi8+CiA8L2c+Cjwvc3ZnPg==");
+  background-size: 1.6em;
+}
+
+.video-js .vjs-airplay-button.casting {
+  /* SVG is repeated and path color is changed. It's not possible to change color of inline SVG */
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjY5OCIgaGVpZ2h0PSI1ODciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gZmlsbD0iIzY2QThDQyIgcG9pbnRzPSI5NS4zMTM5OTUzNjEzMjgxMiw1ODcgNjAyLjY4NTk3NDEyMTA5MzgsNTg3IDM0OSwyOTQuNDI5MDE2MTEzMjgxMjUgIiBpZD0ic3ZnXzMiLz4KICA8cG9seWdvbiBmaWxsPSIjNjZBOENDIiBwb2ludHM9IjIwMS4zMDU5OTk3NTU4NTkzOCwzOTAgMzEsMzkwIDMxLDMxIDY2NywzMSA2NjcsMzkwIDQ5Ni42OTM5Njk3MjY1NjI1LDM5MCA1MjMuOTg5OTkwMjM0Mzc1LDQyMiA2OTgsNDIyIDY5OCwwIDAsMCAwLDQyMiAxNzQuMDEwMDA5NzY1NjI1LDQyMiAiIGlkPSJzdmdfNCIvPgogPC9nPgo8L3N2Zz4=");
+}
+
+/*Mirror Overlay*/
+
+.video-js .vjs-mirror-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #696969;
+
+  color: #f5f5f5;
+  font-size: 1.3em;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.video-js .vjs-mirror-overlay .protocol {
+  font-size: 1.2em;
+  margin-bottom: 7px;
+}
+
+.video-js .vjs-mirror-overlay .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px auto;
+
+  /* the icon comes from http://fontawesome.io/ */
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+DQo8c3ZnIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjE1MzYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogPGc+DQogIDx0aXRsZT5MYXllciAxPC90aXRsZT4NCiAgPHBhdGggaWQ9InN2Z18xIiBmaWxsPSIjZjVmNWY1IiBkPSJtMTc5MiwxMTIwbDAsLTk2MHEwLC0xMyAtOS41LC0yMi41dC0yMi41LC05LjVsLTE2MDAsMHEtMTMsMCAtMjIuNSw5LjV0LTkuNSwyMi41bDAsOTYwcTAsMTMgOS41LDIyLjV0MjIuNSw5LjVsMTYwMCwwcTEzLDAgMjIuNSwtOS41dDkuNSwtMjIuNXptMTI4LC05NjBsMCw5NjBxMCw2NiAtNDcsMTEzdC0xMTMsNDdsLTczNiwwbDAsMTI4bDM1MiwwcTE0LDAgMjMsOXQ5LDIzbDAsNjRxMCwxNCAtOSwyM3QtMjMsOWwtODMyLDBxLTE0LDAgLTIzLC05dC05LC0yM2wwLC02NHEwLC0xNCA5LC0yM3QyMywtOWwzNTIsMGwwLC0xMjhsLTczNiwwcS02NiwwIC0xMTMsLTQ3dC00NywtMTEzbDAsLTk2MHEwLC02NiA0NywtMTEzdDExMywtNDdsMTYwMCwwcTY2LDAgMTEzLDQ3dDQ3LDExM3oiLz4NCiA8L2c+DQo8L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.video-js .vjs-mirror-overlay .wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/*Patches*/
+
+/*
+
+Hide "caption settings" entry from captions menu.
+
+Note: clpp_html5_mse defines `featuresNativeTextTracks` as `false` in order to hide a default Shaka text track.
+Text tracks are added using `addRemoteTextTrack` which creates fake text track and enables
+selection through captions menu. At the same time `Caption Settings` are enabled. Unfortunately `Caption Settings`
+doesn't work in this scenario.
+*/
+li.vjs-texttrack-settings {
+  display: none;
+}
+
+/*
+
+Scale the poster image to be as large as possible so that the player area is completely covered by the poster image.
+
+*/
+.vjs-poster {
+  background-size: cover;
+}
+
+.clpp-stretch {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  position: fixed;
+}
+
+.clpp-dark-bg {
+  background-color: #000;
+}
+
+.clpp-move-cursor {
+  cursor: move;
+}
+
+.vjs-seeking.stalled-fixing .vjs-loading-spinner {
+  display: none;
+}
+
+.video-js.clpp-hide-big-play .vjs-big-play-button {
+  display: none;
+}
+
+/*.clpp-subtitles-container START*/
+.clpp-subtitles-container {
+  bottom: 0;
+  display: none;
+  font-size: 1.92vw;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: 0;
+  margin-bottom: 30px;
+  max-height: 100%;
+  max-width: 100%;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.vjs-user-inactive .clpp-subtitles-container,
+.vjs-controls-disabled .clpp-subtitles-container {
+  margin-bottom: 2%;
+}
+/*.clpp-subtitles-container END*/
+
+/*.clpp-subtitles-inner START*/
+.clpp-subtitles-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.clpp-subtitles-inner.clpp-subtitles-with-images {
+  background-color: transparent;
+  padding-top: 30px;
+  overflow: hidden;
+}
+.clpp-subtitles-inner.clpp-subtitles-with-images-base64 {
+  height: 0;
+}
+/*.clpp-subtitles-inner END*/
+
+/*.clpp-subtitles START*/
+.clpp-subtitles {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+}
+.clpp-subtitles-inner.clpp-subtitles-with-images .clpp-subtitles {
+  background-color: transparent;
+  padding: 0px;
+}
+.clpp-subtitles-inner.clpp-subtitles-with-images-base64 .clpp-subtitles {
+  background-color: transparent;
+  padding: 0px;
+  text-align: left;
+  width: 100%;
+}
+/*.clpp-subtitles END*/
+
+/*.clpp images START*/
+.clpp-subtitles-with-images .clpp-subtitles > img {
+  max-width: 100%;
+}
+.clpp-subtitles-with-images-base64 .clpp-subtitles > img {
+  bottom: 0;
+  left: 50%;
+  margin-left: -22.5%;
+  position: absolute;
+  width: 45%;
+}
+/*.clpp images END*/
+
+
+.vjs-live-dvr.vjs-live .vjs-progress-control {
+  display: flex;
+}
+
+.vjs-live-dvr.video-js .vjs-live-control {
+  flex: inherit;
+}
+.vjs-live-dvr.video-js .vjs-live-control .vjs-live-display {
+  flex: auto;
+}
+
+.clpp-hidden-track {
+  display: none;
+}
+
+.clpp_html5_cast.vjs-has-started .vjs-poster {
+  display: block;
+}
+
+.vjs-big-play-button {
+  z-index: 1112;
+}
+
+.clpp-fullscreen {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.clpp-preroll-ad-pod > video,
+.clpp-preroll-ad-pod > .vjs-control-bar,
+.clpp-ad-pod > video,
+.clpp-ad-pod > .vjs-big-play-button,
+.clpp-ad-pod > .vjs-poster,
+.clpp-ad-pod > .vjs-control-bar {
+  display: none;
+}
+
+.clpp-ad-pod.clpp-single-video > video {
+  display: block;
+}
