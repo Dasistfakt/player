@@ -113,20 +113,7 @@
     
   </div>
 
-
-<p>
-<button id="connect">Connect</button>
-<button id="disconnect">Disconnect</button>
-</p>
-
-<p>
-<button class="load-btn" data-src="//demo.cf.castlabs.com/media/shows/viisights_webinar/Manifest.mpd">Load #1</button>
-<button class="load-btn" data-src="//demo.cf.castlabs.com/media/Route66/dash/Manifest.mpd">Load #2</button>
-</p>
   
-
-  
-
   <div class="post-content">
   <video id="video" width="640" height="360" crossOrigin="anonymous" controls class="video-js vjs-default-skin vjs-big-play-centered">
 </video>
@@ -141,104 +128,28 @@
 <script src="https://vidi1.ru/assets/clpp.withstyles.min.js"></script>
 
 <script>
-
-  /*
-    Please notice that chromecast.html has been updated recently (5.1.9).
-    "Ready to cast" message has been added.
-   */
-
   var player = clpp.init('#video', {
     license: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1cmxzIjpbImh0dHBzOi8vdmlkaTEucnUvIiwiaHR0cHM6Ly93d3cudmlkaXJ1cy5ydS8iXSwidHlwZSI6IldlYiIsImtpZCI6MjI3NCwiaWx2IjpmYWxzZX0.NU3syDJ3FNtGl8Gts4LCKZGf6M8WhvoRHNEU7CFOGsJsk1VV301xk8VTy58I8-1T8E3g6vJ4ypbq4Agw2s7wSESabp6t7g5aVsaIVXPr5UFn__KXXKK1V7Unn52S-h1OpzzAi6fbRxXxeP1gZO5GE5bMTWFchoH4ZSwX1ysH6dEMO6Z00REgQHEhBw1SvalPREv41YDIhSZvLnXFIGABsIY7l6dRWHDAKL30Vj6zYPqO1d5mDqTr99pxcGHSZ0YD079D24462VjBkfxVXwuusbtnWCQE-P6HMLnTCtgT94HCKZZADPd77vs8AriENXW0fDTL67uXRkScLf9QbAq0Yg",
     poster: '//mango.blender.org/wp-content/uploads/2013/05/03_captain_brain.jpg',
     chromecast: {
 
       /* This application ID isn't public. Please create new one. You can use `chromecast.html` as a sample receiver. */
-      appId: 'D80D5506',
-      modifiers: {
-        onIdle: function(idleReason, player) {
-          // you adjust this behaviour dynamically depending on your needs
-
-          // reset player (i.e. unload stream)
-          player.release();
-
-          // default implementation:
-          // player.forceDisconnect();
-        },
-        onResumeLocal: function(player) {
-          // you adjust this behaviour dynamically depending on your needs
-
-          // don't resume after disconnecting
-          return false;
-
-          // default implementation:
-          // return true;
-        }
-      }
+      appId: 'D80D5506'
+    },
+    drmtoday: {
+      userId: 'purchase',
+      sessionId: 'p0',
+      merchant: 'six',
+      environment: clpp.statics.drmtoday.STAGING
     }
   });
 
-  // UI
-
-  var sender = player.castSender;
-
-  function disableOrEnable(selector, disabled) {
-    var nodes = document.querySelectorAll(selector);
-    Array.from(nodes).forEach(function(node) { node.disabled = disabled; });
-  }
-
-  function onChromecastAvailable() {
-    disableOrEnable("#connect", false);
-    disableOrEnable("#disconnect", true);
-    disableOrEnable(".load-btn", true);
-  }
-
-  function onChromecastNotAvailable() {
-    disableOrEnable("#connect", true);
-    disableOrEnable("#disconnect", true);
-    disableOrEnable(".load-btn", true);
-  }
-
-  function onConnected() {
-    disableOrEnable("#connect", true);
-    disableOrEnable("#disconnect", false);
-    disableOrEnable(".load-btn", false);
-  }
-
-  sender.on(clpp.cast.CastSender.CAST_STATUS_CHANGED, function() {
-    if (sender.canCast()) {
-      onChromecastAvailable();
-    }
-    if (sender.isCasting()) {
-      onConnected();
-    }
+  player.load([
+    {src: '//demo.cf.castlabs.com/media/tos_new/DEMO.mpd?v=2', drmProtected: true},
+    {src: '//devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8', drmProtected: false}
+  ]).then(function() {
+    console.log('Player is ready');
   });
-
-  document.getElementById('connect').addEventListener("click", function() {
-
-    // connect and enter the idle state
-    sender.connect().then(onConnected);
-  });
-
-  document.getElementById('disconnect').addEventListener("click", function() {
-    sender.forceDisconnect();
-    onChromecastAvailable();
-  });
-
-  Array.from(document.querySelectorAll('.load-btn')).forEach(function(button) {
-    button.addEventListener("click", function() {
-      var source = {
-        src: button.dataset.src,
-        drmProtected: false
-      };
-
-      sender.cast(source).then(function() {
-        console.log("Casting stream");
-      });
-    });
-  });
-
-  // reset view
-  onChromecastNotAvailable();
 </script>
 
 
