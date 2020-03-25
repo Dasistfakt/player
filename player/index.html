@@ -130,7 +130,6 @@
 <script>
   var player = clpp.init('#video', {
     license: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1cmxzIjpbImh0dHBzOi8vdmlkaTEucnUvIiwiaHR0cHM6Ly93d3cudmlkaXJ1cy5ydS8iXSwidHlwZSI6IldlYiIsImtpZCI6MjI3NCwiaWx2IjpmYWxzZX0.NU3syDJ3FNtGl8Gts4LCKZGf6M8WhvoRHNEU7CFOGsJsk1VV301xk8VTy58I8-1T8E3g6vJ4ypbq4Agw2s7wSESabp6t7g5aVsaIVXPr5UFn__KXXKK1V7Unn52S-h1OpzzAi6fbRxXxeP1gZO5GE5bMTWFchoH4ZSwX1ysH6dEMO6Z00REgQHEhBw1SvalPREv41YDIhSZvLnXFIGABsIY7l6dRWHDAKL30Vj6zYPqO1d5mDqTr99pxcGHSZ0YD079D24462VjBkfxVXwuusbtnWCQE-P6HMLnTCtgT94HCKZZADPd77vs8AriENXW0fDTL67uXRkScLf9QbAq0Yg",
-    poster: '//mango.blender.org/wp-content/uploads/2013/05/03_captain_brain.jpg',
     chromecast: {
 
       /* This application ID isn't public. Please create new one. You can use `chromecast.html` as a sample receiver. */
@@ -145,8 +144,7 @@
   });
 
   player.load([
-    {src: '//demo.cf.castlabs.com/media/tos_new/DEMO.mpd?v=2', drmProtected: true},
-    {src: '//devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8', drmProtected: false}
+    {src: 'https://region.dfs.ivi.ru/jW1Gh3jlSgXGwBM4HIXr8mWAYYM3HMNBO34AcDwEbny1iRSE5tnC11521/voddash-abrhd720,4000/7jYDX15ZWzB_oueO7l1FnA,1584782707/storage2/contents/f/c/b538e5e1fc843cfa2c39f9350a1bd5.ks/f88533a6f6c0304c092e1a864b63b8e6.mpd?rnd=0.20144394901173124', drmProtected: true}
   ]).then(function() {
     console.log('Player is ready');
   });
